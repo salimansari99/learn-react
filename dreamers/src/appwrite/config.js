@@ -16,6 +16,7 @@ export class Service {
 
     async createPost({title, slug, content, featuredImg, status, userId}) {
         try {
+            console.log(title, slug, content, featuredImg, status, userId, "createPost")
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
@@ -132,4 +133,4 @@ export class Service {
 
 const service = new Service();
 
-export default Service;
+export default service;
